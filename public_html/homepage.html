@@ -11,22 +11,35 @@
         <!-- The page header -->
         <div align="center">Welcome to Patient Pre-History Online!</div>
         
+        <br/>
+        
         <!-- The login/create account section -->
         <div align="right">
             <form action="submit">
                 <!-- The user name section -->
-                <div>
+                <div class ="login">
                     <label>Username: </label>
                     <input required/>
                 </div>
                 <!-- The password section -->
-                <div>
+                <div class="login">
                     <label>Password: </label>
                     <input required/>
                 </div>
-                <input type="submit"/>
+                <!-- The submit button -->
+                <input class="login" type="submit"/>
+            </form>
+        </div>
+            
+        <br/>   <!-- Add some spacing between log in and create account -->
+            
+        <!-- The create account section -->
+        <div align="right">
+            <form action="submit">
+                <label>Don't already have a sign in?</label>
                 <input type="submit" value="Create Account"/>
             </form>
         </div>
+        
     </body>
 </html>
