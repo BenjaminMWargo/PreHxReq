@@ -3,21 +3,15 @@ div {
     margin: 5px;
 }
 
-form {
-    display: table;
-}
-
-.table_row {
-    display: table-row;
+.form-align {
+    vertical-align: middle;
 }
 
 label {
-    display: table-cell;
     margin: 5px;
 }
 
 input {
-    display: table-cell;
     margin: 5px;
 }
 

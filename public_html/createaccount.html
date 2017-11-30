@@ -19,20 +19,28 @@
                 <!-- The name entry section -->
                 <div>
                     <!-- First name section -->
-                    <div class="table_row">
+                    <div>
                         <label>First Name:</label>
                         <input required/>
                     </div>
                     <!-- Middle name section -->
-                    <div class="table_row">
+                    <div>
                         <label>Middle Name:</label>
-                        <input placeholder="Optional">
+                        <input placeholder="(Optional)">
                     </div>
                     <!-- Last name section -->
-                    <div class="table_row">
+                    <div>
                         <label>Last Name:</label>
                         <input required/>
                     </div>
+                </div>
+                
+                <!-- Date of birth section -->
+                <div>
+                    <label>Date of Birth:</label>
+                    <input type="number" placeholder="M" max="12" min="1"/>
+                    <input type="number" placeholder="D" max="31" min="1"/>
+                    <input type="number" placeholder="Y" min="1900" max="2017"/>
                 </div>
             </form>
         </div>
