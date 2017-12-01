@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="createaccount.css">
         <script type="text/javascript" src="javascript.js"></script>
     </head>
+    <!-- Load the birth date options when the page loads -->
     <body onload="buildNumberOptions('yearSelection', 2017, 1900);
                   buildOptions('daySelection', 1, 31)">
         <!-- The page header -->
@@ -19,7 +20,7 @@
         <div>
             <form action="submit">
                 <!-- The name entry section -->
-                <div>
+                <div class="solid_border">
                     <!-- First name section -->
                     <div>
                         <label>First Name:</label>
@@ -37,8 +38,8 @@
                     </div>
                 </div>
                 
-                <!-- Date of birth section -->
-                <div>
+                <!-- Date of birth and sex section -->
+                <div class="solid_border">
                     <label>Date of Birth:</label>
                     <!-- Month dropdown selection -->
                     <select required>
@@ -60,10 +61,38 @@
                     <select id="daySelection">
                         <option value="">Day</option>
                     </select>
+                    <!-- Year dropdown selection -->
                     <select id="yearSelection">
                         <option value="">Year</option>
                     </select>
+                    
+                    <br/>   <!-- Put some spacing between dob and sex -->
+                    
+                    <!-- Sex section -->
+                    <label>Sex:</label>
+                    <select>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
                 </div>
+                <!-- Address section -->
+                <div class="solid_border">
+                    <!-- Street address section -->
+                    <div>
+                        <label>Street Address:</label>
+                        <input required/>
+                        <label>Apt:</label>
+                        <input>
+                    </div>
+                    <!-- City and state section -->
+                    <div>
+                        <label>City:</label>
+                        <input required>
+                        <label>State:</label>
+                        <input required>
+                    </div>
+                </div>
+                
             </form>
         </div>
     </body>
