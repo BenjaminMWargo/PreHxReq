@@ -6,8 +6,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="createaccount.css">
+        <script type="text/javascript" src="javascript.js"></script>
     </head>
-    <body>
+    <body onload="buildNumberOptions('yearSelection', 2017, 1900);
+                  buildOptions('daySelection', 1, 31)">
         <!-- The page header -->
         <div align="center">Today you begin your Patient Pre-Hx journey!</div>
         
@@ -38,9 +40,29 @@
                 <!-- Date of birth section -->
                 <div>
                     <label>Date of Birth:</label>
-                    <input type="number" placeholder="M" max="12" min="1"/>
-                    <input type="number" placeholder="D" max="31" min="1"/>
-                    <input type="number" placeholder="Y" min="1900" max="2017"/>
+                    <!-- Month dropdown selection -->
+                    <select required>
+                        <option value="">Month</option>
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                    </select>
+                    <!-- Day dropdown selection -->
+                    <select id="daySelection">
+                        <option value="">Day</option>
+                    </select>
+                    <select id="yearSelection">
+                        <option value="">Year</option>
+                    </select>
                 </div>
             </form>
         </div>
