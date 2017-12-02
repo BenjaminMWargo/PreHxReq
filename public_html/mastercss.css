@@ -3,6 +3,10 @@
     vertical-align: middle;
 }
 
+textarea {
+    margin-left: 20px;
+}
+
 label {
     margin: 5px;
 }
