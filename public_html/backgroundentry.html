@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="mastercss.css">
+        <script type="text/javascript" src="javascript.js"></script>
     </head>
     <body>
         <div>
@@ -19,28 +20,28 @@
                 <div>
                     <label>Past Family/Social History:</label>
                     <br/>
-                    <textarea rows="10" cols="100"></textarea>
+                    <textarea rows="10" cols="100" required></textarea>
                 </div>
                 
                 <!-- Past illnesses section -->
                 <div>
                     <label>Past Illnesses:</label>
                     <br/>
-                    <textarea rows="10" cols="100"></textarea>
+                    <textarea rows="10" cols="100" required ></textarea>
                 </div>
                 
                 <!-- Past surgeries section -->
                 <div>
                     <label>Past Surgeries:</label>
                     <br/>
-                    <textarea rows="10" cols="100"></textarea>
+                    <textarea rows="10" cols="100" required></textarea>
                 </div>
                 
                 <!-- Family disease states section -->
                 <div>
                     <label>Current Family Disease States:</label>
                     <br/>
-                    <textarea rows="10" cols="100"></textarea>
+                    <textarea rows="10" cols="100" required></textarea>
                 </div>
                 
                 <!-- Tobacco/Alcohol use -->
@@ -48,8 +49,8 @@
                     <!-- Tobacco use section -->
                     <div>
                         <label>Do you use tobacco?</label>
-                        <select>
-                            <option>-Select-</option>
+                        <select required>
+                            <option value="">-Select-</option>
                             <option>Yes</option>
                             <option>No</option>
                         </select>
@@ -57,12 +58,20 @@
                     <!-- Alcohol consumption section -->
                     <div>
                         <label>Do you consume alcohol?</label>
-                        <select>
-                            <option>-Select-</option>
+                        <select required>
+                            <option value="">-Select-</option>
                             <option>Yes</option>
                             <option>No</option>
                         </select>
                     </div>
+                </div>
+                
+                <!-- Medication related questions -->
+                <div id="allergiesInputs" class="solid_border">
+                    <label>List of allergies</label>
+                    <a href="javascript:addInput('allergiesInputs', 4);">Add</a>
+                    <br/>
+                    <input/>
                 </div>
                 
             </form>

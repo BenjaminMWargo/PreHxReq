@@ -1,9 +1,7 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+// A function to accept in a select tag, a beginning integer, and an ending integer
+// The function will append all integers between the beginning and ending value 
+// to the select tag's options list
 function buildNumberOptions(selectElement, begin, end)
 {
     // Get a hook to the select element
@@ -24,6 +22,21 @@ function buildNumberOptions(selectElement, begin, end)
         if(begin < end) begin++;
         else begin--;
     }
+}
+
+// A function to add an input to a given div
+// Once the specified number of inputs have been added to a given line, 
+// a line break will be added
+function addInput(divID, maxNumOfInputsOnLine)
+{
+    var div = document.getElementById(divID);
+    
+    if(div.getElementsByTagName("input").length % maxNumOfInputsOnLine === 0) 
+    {
+        div.appendChild(document.createElement("br"));
+    }
+    
+    div.appendChild(document.createElement("input"));  
 }
 
 
