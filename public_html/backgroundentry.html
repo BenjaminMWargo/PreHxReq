@@ -67,11 +67,36 @@
                 </div>
                 
                 <!-- Medication related questions -->
-                <div id="allergiesInputs" class="solid_border">
-                    <label>List of allergies</label>
-                    <a href="javascript:addInput('allergiesInputs', 4);">Add</a>
-                    <br/>
-                    <input/>
+                <div class="solid_border">
+                    <!-- Allergies section -->
+                    <div id="allergiesInputs">
+                        <label>List of Allergies:</label>
+                        <a href="javascript:addInput('allergiesInputs', 4);">Add</a>
+                        <label>|</label>
+                        <a href="javascript:removeInput('allergiesInputs');">Remove</a>
+                        <br/>
+                        <input/>
+                    </div>
+                    
+                    <!-- Current medications section -->
+                    <div id="currentMedicationsInputs">
+                        <label>List of Current Medications:</label>
+                        <a href="javascript:addInput('currentMedicationsInputs', 4);">Add</a>
+                        <label>|</label>
+                        <a href="javascript:removeInput('currentMedicationsInputs');">Remove</a>
+                        <br/>
+                        <input/>
+                    </div>
+                    
+                    <!-- Medication History section -->
+                    <div id="pastMedicationsInputs">
+                        <label>List of Previous Medications</label>
+                        <a href="javascript:addInput('pastMedicationsInputs', 4);">Add</a>
+                        <label>|</label>
+                        <a href="javascript:removeInput('pastMedicationsInputs');">Remove</a>
+                        <br/>
+                        <input/>
+                    </div>
                 </div>
                 
             </form>

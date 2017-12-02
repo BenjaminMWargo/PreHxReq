@@ -33,10 +33,33 @@ function addInput(divID, maxNumOfInputsOnLine)
     
     if(div.getElementsByTagName("input").length % maxNumOfInputsOnLine === 0) 
     {
+        // Make sure there aren't any break elements before inserting a new one
+        while(div.lastChild.tagName === "BR")
+        {
+            div.removeChild(div.lastChild);
+        }
+        
         div.appendChild(document.createElement("br"));
     }
     
     div.appendChild(document.createElement("input"));  
+}
+
+// A function to remove inputs from a given div
+function removeInput(divID)
+{
+    var div = document.getElementById(divID);
+    
+    if(div.getElementsByTagName("input").length > 1)
+    {
+        // If the last element is a break line, consume that element first
+        while(div.lastChild.tagName === "BR")
+        {
+            div.removeChild(div.lastChild);
+        }
+        
+        div.removeChild(div.lastChild);
+    }
 }
 
 
