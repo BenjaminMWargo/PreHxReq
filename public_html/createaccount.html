@@ -10,7 +10,7 @@
     </head>
     <!-- Load the birth date options when the page loads -->
     <body onload="buildNumberOptions('yearSelection', 2017, 1900);
-                  buildOptions('daySelection', 1, 31)">
+                  buildNumberOptions('daySelection', 1, 31);">
         <!-- The page header -->
         <div align="center">Today you begin your Patient Pre-Hx journey!</div>
         
@@ -58,11 +58,11 @@
                         <option>December</option>
                     </select>
                     <!-- Day dropdown selection -->
-                    <select id="daySelection">
+                    <select id="daySelection" required>
                         <option value="">Day</option>
                     </select>
                     <!-- Year dropdown selection -->
-                    <select id="yearSelection">
+                    <select id="yearSelection" required>
                         <option value="">Year</option>
                     </select>
                     
@@ -70,7 +70,8 @@
                     
                     <!-- Sex section -->
                     <label>Sex:</label>
-                    <select>
+                    <select required>
+                        <option value="">-Select sex-</option>
                         <option>Male</option>
                         <option>Female</option>
                     </select>
@@ -82,7 +83,7 @@
                         <label>Street Address:</label>
                         <input required/>
                         <label>Apt:</label>
-                        <input>
+                        <input placeholder="(Optional)">
                     </div>
                     <!-- City and state section -->
                     <div>
@@ -91,8 +92,8 @@
                         <input required>
                         <!-- State dropbox -->
                         <label>State:</label>
-                        <select>
-                            <option value="">Select State</option>
+                        <select required>
+                            <option value="">-Select State-</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
                             <option value="AZ">Arizona</option>
@@ -148,6 +149,45 @@
                     </div>
                 </div>
                 
+                <!-- Phone number and email section -->
+                <div class="solid_border">
+                    <!-- Phone number section -->
+                    <div>
+                        <label>Phone Number:</label>
+                        <input placeholder="(Optional)"/>
+                    </div>
+                    <!-- Email section -->
+                    <div>
+                        <label>Email Address:</label>
+                        <input required>
+                    </div>
+                </div>
+                
+                <!-- Password and verify password section -->
+                <div class="solid_border">
+                    <!-- Password section -->
+                    <div>
+                        <label>Password:</label>
+                        <input required>
+                    </div>
+                    
+                    <!-- Verify password section -->
+                    <div>
+                        <label>Verify Password:</label>
+                        <input required>
+                    </div>
+                </div>
+                <!-- The terms and conditions and submit section -->
+                <div>
+                    <input type="submit" value="Create Account"/>
+                    <input type="checkbox" required>
+                    <label>
+                        I agree to the 
+                            <a href="terms&conditions.html">
+                                Terms and Conditions
+                            </a>
+                    </label>
+                </div>
             </form>
         </div>
     </body>
