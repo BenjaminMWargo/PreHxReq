@@ -42,7 +42,9 @@ function addInput(divID, maxNumOfInputsOnLine)
         div.appendChild(document.createElement("br"));
     }
     
-    div.appendChild(document.createElement("input"));  
+    var input = document.createElement("input");
+    input.required = true;
+    div.appendChild(input);  
 }
 
 // A function to remove inputs from a given div
