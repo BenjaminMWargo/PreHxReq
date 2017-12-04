@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="mastercss.css">
+    <title>title</title>
+  </head>
+  <body>
+	<div id="reportsDash">
+		<h1>Reports</h1>
+		<div id="reportsContainerFirstRow" class="wrap" style="width: 100%;">
+			<div id="userStats" class="solid_border wrap-block" style="width: 25%;">
+				<h3>User Stats</h3>
+				<p>Users online: 203</p>
+				<ul>
+					<li>Authenticated: 195</li>
+					<li>Guest Users: 8</li>
+				</ul>
+				<p>Users subscribed: 38026</p>
+			</div>
+			<div id="webStats" class="solid_border wrap-block" style="width: 25%;">
+				<h3>Website Stats</h3>
+				<p>Sever Uptime: 127d 11h 37m 45s</p>
+				<p>Page Views Today: 12023</p>
+				<p>Unique Hits Today: 522</p>
+			</div>
+			<div id="preHxStats" class="solid_border wrap-block" style="width: 25%;">
+				<h3>PreHx Stats</h3>
+				<p>Total PreHxs Hosted: 77234</p>
+				<p>Average PreHxs per User: 4.1</p>
+				<p>Total PreHx Alerst: 3021</p>
+				<p>Average PreHx Alerts per User: 0.56</p>
+			</div>
+		</div>
+		<div id="reportsContainerSecondRow" class="wrap" style="width: 100%">
+			<div id="userInsights" class="solid_border wrap-block" style="width: 75%;">
+				<h3 class="cen-align">User Insights</h3>
+				<table style="width: 100%">
+					<tr>
+						<th>Page</th>
+						<th>Time Spent</th>
+					</tr>
+					<tr>
+						<td align="center">PreHx</td>
+						<td align="center">235 seconds</td>
+					</tr>
+					<tr>
+						<td align="center">Background</td>
+						<td align="center">180 seconds</td>
+					</tr>
+					<tr>
+						<td align="center">Alerts</td>
+						<td align="center">7 seconds</td>
+					</tr>
+				</table>
+			</div>
+			<div id="surveyGraph" class="solid_border wrap-block" style="width: 25%;">
+				Graph Goes Here
+			</div>
+		</div>
+	</div>
+	<h1>User Admin</h1>
+	<div id="userAdmin">
+		<div id="userSearchBox" class="solid_border" style="width: 100%">
+			<form>
+				<span>Search Terms: </span>
+				<input type="text" name="searchTerm">
+				<span>
+				    <input type="radio" id="locationOption"
+					 name="contact" value="location">
+					<label for="contactChoice1">Location</label>
+
+					<input type="radio" id="ageOption"
+					 name="contact" value="age">
+					<label for="contactChoice2">Age</label>
+
+					<input type="radio" id="sexOption"
+					 name="contact" value="sex">
+					<label for="contactChoice3">Sex</label>
+				</span>
+				<input type="submit">
+			</form>
+		</div>
+		<table id="userTable" class="solid_border" style="width: 100%">
+			<tr>
+				<th>User ID</th>
+				<th>Location</th>
+				<th>Age</th>
+				<th>Sex</th>
+			</tr>
+			<tr>
+				<td align="center">#1E2F4B0CAA2</td>
+				<td align="center">Pennsylvania, USA</td>
+				<td align="center">37</td>
+				<td align="center">M</td>
+			</tr>
+			<tr>
+				<td align="center">#142F440CBAD</td>
+				<td align="center">Florida, USA</td>
+				<td align="center">62</td>
+				<td align="center">F</td>
+			</tr>
+			<tr>
+				<td align="center">#1E409EE21A2</td>
+				<td align="center">Pennsylvania, USA</td>
+				<td align="center">19</td>
+				<td align="center">F</td>
+			</tr>
+			<tr>
+				<td align="center">#FB00023ADF8</td>
+				<td align="center">Arkansas, USA</td>
+				<td align="center">90</td>
+				<td align="center">M</td>
+			</tr>
+		</table>
+	</div>
+	<h1>PreHx Admin</h1>
+	<div id="preHx">
+		<div id="preHxSearchBox" class="solid_border" style="width: 100%">
+			<form>
+				<span>Search Terms: </span>
+				<input type="text" name="searchTerm">
+				<span>
+				    <input type="radio" id="timeOption"
+					 name="contact" value="time">
+					<label for="contactChoice1">Submission Time</label>
+
+					<input type="radio" id="userOption"
+					 name="contact" value="user">
+					<label for="contactChoice2">User Key</label>
+				</span>
+				<input type="submit">
+			</form>
+		</div>
+		<table id="prehxTable" class="solid_border" style="width: 100%">
+			<tr>
+				<th>PreHX ID</th>
+				<th>User ID</th>
+				<th>Time Submitted</th>
+			</tr>
+			<tr>
+				<td align="center">#333ADF208EF</td>
+				<td align="center">#1E2F4B0CAA2</td>
+				<td align="center">11s ago</td>
+			</tr>
+			<tr>
+				<td align="center">#40102ABEE8F</td>
+				<td align="center">#142F440CBAD</td>
+				<td align="center">1m ago</td>
+			</tr>
+			<tr>
+				<td align="center">#5D2180AAA2F</td>
+				<td align="center">#1E409EE21A2</td>
+				<td align="center">35m ago</td>
+			</tr>
+
+		</table>
+	</div>
+  </body>
+</html>
