@@ -30,8 +30,11 @@ function buildNumberOptions(selectElement, begin, end)
 function addInput(divID, maxNumOfInputsOnLine)
 {
     var div = document.getElementById(divID);
+    var inputs = Array.from(div.getElementsByTagName("input"));
     
-    if(div.getElementsByTagName("input").length % maxNumOfInputsOnLine === 0) 
+    console.log(inputs[1].getAttribute("type"));
+    if(inputs.filter(input => input.getAttribute("type") === null)
+                .length % maxNumOfInputsOnLine === 0) 
     {
         // Make sure there aren't any break elements before inserting a new one
         while(div.lastChild.tagName === "BR")
@@ -51,8 +54,10 @@ function addInput(divID, maxNumOfInputsOnLine)
 function removeInput(divID)
 {
     var div = document.getElementById(divID);
+    var divInputs = Array.from(div.getElementsByTagName("input"));
     
-    if(div.getElementsByTagName("input").length > 1)
+    console.log(divInputs.filter(input => input.getAttribute("type") === null).length);
+    if(divInputs.filter(input => input.getAttribute("type") === null).length > 1)
     {
         // If the last element is a break line, consume that element first
         while(div.lastChild.tagName === "BR")
@@ -64,4 +69,13 @@ function removeInput(divID)
     }
 }
 
-
+function hideTextInputs(divID)
+{
+    var inputs = Array.from(document.getElementById(divID))
+            .filter(input => input.getAttribute("type") === null);
+    
+    for(var i = 0; i < inputs.length; i++)
+    {
+        inputs[i].hidden = true;
+    }
+}
