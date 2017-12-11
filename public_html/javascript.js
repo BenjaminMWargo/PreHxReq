@@ -27,14 +27,12 @@ function buildNumberOptions(selectElement, begin, end)
 // A function to add an input to a given div
 // Once the specified number of inputs have been added to a given line, 
 // a line break will be added
-function addInput(divID, maxNumOfInputsOnLine)
+function addTextInput(divID, maxNumOfInputsOnLine)
 {
     var div = document.getElementById(divID);
     var inputs = Array.from(div.getElementsByTagName("input"));
     
-    console.log(inputs[1].getAttribute("type"));
-    if(inputs.filter(input => input.getAttribute("type") === null)
-                .length % maxNumOfInputsOnLine === 0) 
+    if(inputs.length % maxNumOfInputsOnLine === 0) 
     {
         // Make sure there aren't any break elements before inserting a new one
         while(div.lastChild.tagName === "BR")
@@ -46,18 +44,16 @@ function addInput(divID, maxNumOfInputsOnLine)
     }
     
     var input = document.createElement("input");
-    input.required = true;
     div.appendChild(input);  
 }
 
 // A function to remove inputs from a given div
-function removeInput(divID)
+function removeTextInput(divID)
 {
     var div = document.getElementById(divID);
     var divInputs = Array.from(div.getElementsByTagName("input"));
     
-    console.log(divInputs.filter(input => input.getAttribute("type") === null).length);
-    if(divInputs.filter(input => input.getAttribute("type") === null).length > 1)
+    if(divInputs.length > 1)
     {
         // If the last element is a break line, consume that element first
         while(div.lastChild.tagName === "BR")
@@ -69,13 +65,23 @@ function removeInput(divID)
     }
 }
 
-function hideTextInputs(divID)
+function toggle(divID)
 {
-    var inputs = Array.from(document.getElementById(divID))
-            .filter(input => input.getAttribute("type") === null);
+    var div = document.getElementById(divID);
     
-    for(var i = 0; i < inputs.length; i++)
+    if(divID.includes("AddAndRemove"))
     {
-        inputs[i].hidden = true;
+        if(div.style.display === "inline")
+        {
+            div.style.display = "none";
+        }
+        else
+        {
+            div.style = "display:inline";
+        }
+    }
+    else
+    {
+        div.hidden = !div.hidden;
     }
 }

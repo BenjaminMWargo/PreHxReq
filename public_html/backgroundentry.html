@@ -49,48 +49,68 @@
                     <!-- Tobacco use section -->
                     <div>
                         <label>Do you use tobacco?</label>
-                        <input type="checkbox"/>Yes<br/>
+                        <input type="checkbox"/>Yes
+                        <input type="checkbox"/>No<br/>
                     </div>
                     <!-- Alcohol consumption section -->
                     <div>
                         <label>Do you consume alcohol?</label>
-                        <input type="checkbox"/>Yes<br/>
+                        <input type="checkbox"/>Yes
+                        <input type="checkbox"/>No<br/>
                     </div>
                 </div>
                 
                 <!-- Medication related questions -->
                 <div class="solid_border">
                     <!-- Allergies section -->
-                    <div id="allergiesInputs">
+                    <div>
                         <label>List of Allergies:</label>
-                        <a href="javascript:addInput('allergiesInputs', 4);">Add</a>
-                        <label>|</label>
-                        <a href="javascript:removeInput('allergiesInputs');">Remove</a>
+                        <div id="allergiesAddAndRemove" style="display:inline">
+                            <a href="javascript:addTextInput('allergiesInputs', 4);">Add</a>
+                            <label>|</label>
+                            <a href="javascript:removeTextInput('allergiesInputs');">Remove</a>
+                        </div>
                         <br/>
-                        <input type="checkbox" onchange="hideTextinputs('allergiesInputs')"/>No allergies<br/>
-                        <input required/>
+                        <input type="checkbox" onchange="toggle('allergiesInputs');
+                                                         toggle('allergiesAddAndRemove');"/>
+                            No allergies<br/>
+                        <div id="allergiesInputs">
+                            <input required/>
+                        </div>
                     </div>
                     
                     <!-- Current medications section -->
-                    <div id="currentMedicationsInputs">
+                    <div>
                         <label>List of Current Medications:</label>
-                        <a href="javascript:addInput('currentMedicationsInputs', 4);">Add</a>
-                        <label>|</label>
-                        <a href="javascript:removeInput('currentMedicationsInputs');">Remove</a>
+                        <div id="medicationsAddAndRemove" style="display:inline;">
+                            <a href="javascript:addTextInput('currentMedicationsInputs', 4);">Add</a>
+                            <label>|</label>
+                            <a href="javascript:removeTextInput('currentMedicationsInputs');">Remove</a>
+                        </div>
                         <br/>
-                        <input type="checkbox" onchange=""/>No current medications<br/>
-                        <input required/>
+                        <input type="checkbox" onchange="toggle('currentMedicationsInputs');
+                                                         toggle('medicationsAddAndRemove');"/>
+                            No current medications<br/>
+                        <div id="currentMedicationsInputs">
+                            <input required/>
+                        </div>
                     </div>
                     
                     <!-- Medication History section -->
-                    <div id="pastMedicationsInputs">
+                    <div>
                         <label>List of Previous Medications</label>
-                        <a href="javascript:addInput('pastMedicationsInputs', 4);">Add</a>
-                        <label>|</label>
-                        <a href="javascript:removeInput('pastMedicationsInputs');">Remove</a>
+                        <div id="historyAddAndRemove" style="display:inline;">
+                            <a href="javascript:addTextInput('pastMedicationsInputs', 4);">Add</a>
+                            <label>|</label>
+                            <a href="javascript:removeTextInput('pastMedicationsInputs');">Remove</a>
+                        </div>
                         <br/>
-                        <input type="checkbox" onchange=""/>No medication history<br/>
-                        <input required/>
+                        <input type="checkbox" onchange="toggle('pastMedicationsInputs');
+                                                         toggle('historyAddAndRemove');"/>
+                            No medication history<br/>
+                        <div id="pastMedicationsInputs">
+                            <input required/>
+                        </div>
                     </div>
                 </div>
                 
