@@ -65,6 +65,14 @@ function removeTextInput(divID)
     }
 }
 
+function unCheckBox(checkID)
+{
+    var check = document.getElementById(checkID);
+    
+    check.checked = false;
+    check.required = false;
+}
+
 function toggle(divID)
 {
     var div = document.getElementById(divID);

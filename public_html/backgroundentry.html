@@ -49,14 +49,18 @@
                     <!-- Tobacco use section -->
                     <div>
                         <label>Do you use tobacco?</label>
-                        <input type="checkbox"/>Yes
-                        <input type="checkbox"/>No<br/>
+                        <input id="tobaccoCheck1" type="checkbox" 
+                               onclick="unCheckBox('tobaccoCheck2');" required/>Yes
+                        <input id="tobaccoCheck2" type="checkbox"
+                               onclick="unCheckBox('tobaccoCheck1'); required"/>No<br/>
                     </div>
                     <!-- Alcohol consumption section -->
                     <div>
                         <label>Do you consume alcohol?</label>
-                        <input type="checkbox"/>Yes
-                        <input type="checkbox"/>No<br/>
+                        <input id="alcoholCheck1" type="checkbox"
+                               onclick="unCheckBox('alcoholCheck2');" required/>Yes
+                        <input id="alcoholCheck2" type="checkbox"
+                               onclick="unCheckBox('alcoholCheck1');" required/>No<br/>
                     </div>
                 </div>
                 
