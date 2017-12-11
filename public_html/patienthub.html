@@ -9,15 +9,59 @@ and open the template in the editor.
         <title>Patient Hub</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="mastercss.css">
     </head>
     <body>
         <div align="center">Patient Hub</div>
         <br/>
+        
+        <!-- Upper-right corner buttons -->
         <div align="right">
-            <button type="button">View/Edit Background</button>
-            <button type="button">View/Edit Profile</button>
+            <button type="button" 
+                    onclick="window.location = 'backgroundentry.html'">View/Edit Background
+            </button>
+            <button type="button" 
+                    onclick="window.location = 'createaccount.html'">View/Edit Profile
+            </button>
             <br/><br/>
             <button type="button">Start a New Pre-HX</button>
         </div>
+        
+        <!-- Past Pre-HX table -->
+        <h2>Past Pre-Histories</h2>
+        <table style="width:100%">
+            
+            <!-- TABLE HEADER -->
+            <tr>
+                <th>Date</th>
+                <th></th>
+                <th>Annotation Alerts (If any)</th>
+                <th></th>
+            </tr>
+            
+            <!-- ROW 1 -->
+            <tr>
+                <td>12/22/2030</td>
+                <td><button type="button">View/Print Pre-History</button></td>
+                <td>No alerts</td>
+                <td><button type="button">Edit Pre-History</button></td>
+            </tr>
+            
+            <!-- ROW 2 -->
+            <tr>
+                <td>6/5/2026</td>
+                <td><button type="button">View/Print Pre-History</button></td>
+                <td>(!) </td>
+                <td><button type="button">Edit Pre-History</button></td>
+            </tr>
+            
+            <!-- ROW 3 -->
+            <tr>
+                <td>8/14/2022</td>
+                <td><button type="button">View/Print Pre-History</button></td>
+                <td>(!) (!) (!)</td>
+                <td><button type="button">Edit Pre-History</button></td>
+            </tr>
+        </table>
     </body>
 </html>
