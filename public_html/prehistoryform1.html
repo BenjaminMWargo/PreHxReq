@@ -117,6 +117,24 @@ and open the template in the editor.
                 </select>
             </div>
             
+            <!-- Timing of the problem -->
+            <div>
+                <b>Timing: </b><i>(When does the problem occur?)</i>
+                <select id="timingSelectId" 
+                        onchange="javascript:checkIfOther('timingSelectId', 
+                                    'timingOtherTextEntry');" required>
+                    <option value="">--Timing--</option>
+                    <option>All the Time</option>
+                    <option>Morning</option>
+                    <option>Night</option>
+                    <option>Other</option>
+                </select>
+                <div id="timingOtherTextEntry" hidden>
+                    <textarea placeholder="Describe the timing here" rows="10" 
+                              cols="100" required></textarea>
+                </div>
+            </div>
+            
             <!-- Form buttons -->
             <div>
                 <button type="button" onclick="window.location = 'patienthub.html';">

@@ -93,3 +93,18 @@ function toggle(divID)
         div.hidden = !div.hidden;
     }
 }
+
+function checkIfOther(selectID, divID)
+{
+    var select = document.getElementById(selectID);
+    var div = document.getElementById(divID);
+    
+    if(select.options[select.selectedIndex].value === "Other")
+    {
+        div.hidden = false;
+    }
+    else
+    {
+        div.hidden = true;
+    }
+}
