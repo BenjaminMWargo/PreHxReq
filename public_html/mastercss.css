@@ -23,8 +23,30 @@ input {
     padding: 5px;
 }
 
-table, td, th {
+.solid-border-no-pad{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid black;
+}
+
+.cen-align{
+	text-align: center;
+}
+
+/* Admin Classes */
+.wrap{
+	display: flex;
+	float: left;
+	clear: both;
+}
+
+.wrap-block{
+	flex: 1;
+	
+	padding: 1em;
+}
+
+.patientHubTableStyle {
     border: 3px solid blue;
     padding: 3px;
 }
-

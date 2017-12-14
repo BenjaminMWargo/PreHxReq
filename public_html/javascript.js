@@ -211,3 +211,19 @@ function removeSurgeryInputs(divID)
         div.removeChild(div.lastChild);
     }
 }
+
+function UserOrAdmin()
+{
+    console.log(document.getElementById('username').value);
+    
+    if(document.getElementById('username').value === "admin")
+    {
+        document.getElementById("loginForm").action = "admindash.html";
+    }
+    else
+    {
+        document.getElementById("loginForm").action = "patienthub.html";
+    }
+    
+    return true;
+}
