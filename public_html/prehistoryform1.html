@@ -97,6 +97,27 @@ and open the template in the editor.
                 </div>
             </div>
             
+            <!-- Severity of the problem -->
+            <div>
+                <b>Severity: </b><i>Rate how bad you think your problem is from 0 (not present
+                    now) to 10 (the worst it can possibly be)</i>
+                <input type="number" min="0" max="10" required/>
+            </div>
+            
+            <!-- Duration of the problem -->
+            <div>
+                <b>Duration: </b><i>How long have you had this problem?</i>
+                <input id="durationInputAmount" min="1" max="23" type="number" required/>
+                <select required>
+                    <option value="">--Time--</option>
+                    <option>Hours</option>
+                    <option>Days</option>
+                    <option>Weeks</option>
+                    <option>Months</option>
+                </select>
+            </div>
+            
+            <!-- Form buttons -->
             <div>
                 <button type="button" onclick="window.location = 'patienthub.html';">
                     Save And Return
