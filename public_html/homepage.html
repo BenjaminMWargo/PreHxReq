@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="mastercss.css">
+        <script type="text/javascript" src="javascript.js"></script>
     </head>
     <body>
         <!-- The page header -->
@@ -15,16 +16,16 @@
         
         <!-- The login/create account section -->
         <div align="right">
-            <form action="submit">
+            <form id="loginForm" onsubmit="return UserOrAdmin();">
                 <!-- The user name section -->
                 <div>
                     <label>Username: </label>
-                    <input required/>
+                    <input id="username" required/>
                 </div>
                 <!-- The password section -->
                 <div>
                     <label>Password: </label>
-                    <input required/>
+                    <input id="password" required/>
                 </div>
                 <!-- The submit button -->
                 <input type="submit"/>
