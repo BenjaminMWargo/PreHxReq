@@ -9,12 +9,59 @@ and open the template in the editor.
         <title>Patient Pre-History Form (Status of Chronic Disease(s))</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="mastercss.css">
+        <script type="text/javascript" src="javascript.js"></script>
     </head>
     <body>
         <!-- Header text of the form -->
         <div>
             <label style="float: left">Patient Advocacy Initiative - Patient Experience Survey</label>
             <label style="float: right;">Packet #1: PRE - Send to patient prior to office visit</label>
+        </div>
+        
+        <br/><br/>
+        
+        <!-- Status of chronic disease(s) header -->
+        <div>
+            <h3>
+                <b>STATUS of Chronic Disease(s)</b>
+            </h3>
+            
+            <b>
+                Name each condition/disease and comment on how you are doing.
+                <br/>
+                If you are being seen today because of an issue with your chronic disease(s),
+                please discuss that issue first and give an update on each condition
+            </b>
+        </div>
+        
+        <br/><br/>
+        
+        <!-- Chronic disease(s) entry section -->
+        <div class="solid_border">
+            Name of Disease: <input/><br/>
+            <textarea placeholder="Description of your current status" 
+                      rows="10" cols="100"></textarea>
+        </div>
+        
+        <!-- Review of Systems header -->
+        <div>
+            <h3><b>Review of Systems</b></h3>
+        </div>
+        
+        <!-- Constitutional section -->
+        <div>
+            <b>Constitutional: </b><i>(How are you feeling overall? Energy level? Weight loss?)</i>
+        </div>
+        
+        <!-- Vision section -->
+        <div>
+            <b>Eyes: </b>
+            <select>
+                <option>--Vision is fine--</option>
+                <option>Blurred Vision</option>
+                <option>Loss of Vision</option>
+            </select>
         </div>
     </body>
 </html>
