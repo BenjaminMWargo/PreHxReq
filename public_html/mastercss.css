@@ -3,6 +3,10 @@
     vertical-align: middle;
 }
 
+textarea {
+    margin-left: 20px;
+}
+
 label {
     margin: 5px;
 }
@@ -39,4 +43,9 @@ input {
 	flex: 1;
 	
 	padding: 1em;
+}
+
+table, td, th {
+    border: 3px solid blue;
+    padding: 3px;
 }
