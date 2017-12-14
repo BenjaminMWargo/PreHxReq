@@ -16,32 +16,48 @@
         
                 <br/><br/>
         
-                <!-- Past family/social history -->
-                <div>
-                    <label>Past Family/Social History:</label>
-                    <br/>
-                    <textarea rows="10" cols="100" required></textarea>
-                </div>
-                
                 <!-- Past illnesses section -->
                 <div>
                     <label>Past Illnesses:</label>
-                    <br/>
-                    <textarea rows="10" cols="100" required ></textarea>
+                    <div id="illnessesAddAndRemove" style="display:inline;">
+                    <a href="javascript:addTextInput('illnessesEntry', 4);">Add</a>
+                    <label>|</label>
+                    <a href="javascript:removeTextInput('illnessesEntry');">Remove</a>
+                    </div>
+                    <input type="checkbox" onchange="toggle('illnessesEntry');
+                                                 toggle('illnessesAddAndRemove');"/>
+                            No prior illnesses<br/>
+                            
+                    <div id="illnessesEntry">
+                        <input/>
+                    </div>
                 </div>
                 
                 <!-- Past surgeries section -->
                 <div>
                     <label>Past Surgeries:</label>
-                    <br/>
-                    <textarea rows="10" cols="100" required></textarea>
-                </div>
+                    <div id="surgeriesAddAndRemove" style="display:inline;">
+                        <a href="javascript:addTextInput('surgeriesEntry', 4);">Add</a>
+                        <label>|</label>
+                        <a href="javascript:removeTextInput('surgeriesEntry');">Remove</a>
+                    </div>
+                
+                    <input type="checkbox" onchange="toggle('surgeriesAddAndRemove');
+                                                     toggle('surgeriesEntry');"/>
+                                No prior surgeries<br/>
+                    <div id="surgeriesEntry">
+                        <input/>
+                    </div>
                 
                 <!-- Family disease states section -->
                 <div>
                     <label>Current Family Disease States:</label>
-                    <br/>
-                    <textarea rows="10" cols="100" required></textarea>
+                    <input type="checkbox" 
+                           onchange="toggle('familyDiseaseEntry');"/>
+                                No family diseases<br/>
+                    <div id="familyDiseaseEntry">
+                        <textarea rows="10" cols="100" required></textarea>
+                    </div>
                 </div>
                 
                 <!-- Tobacco/Alcohol use -->
