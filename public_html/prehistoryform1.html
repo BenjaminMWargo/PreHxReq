@@ -71,6 +71,7 @@ and open the template in the editor.
                 </h4>
             </div>
 
+            <!-- Location on the body entry -->
             <div>
                 <b>Location: </b><i>(Where on your body is the problem?)</i>
                 <div id="locationAddAndRemove" style="display:inline;">
@@ -83,6 +84,16 @@ and open the template in the editor.
                 <label>N/A</label>
                 <div id="locationInputs">
                     <input required/>
+                </div>
+            </div>
+            
+            <!-- Quality of the problem -->
+            <div>
+                <b>Quality: </b> <i>(What does it look or feel like?)</i>
+                <br/><input type="checkbox" onchange="javascript:toggle('qualityEntry');"/>
+                <label>N/A</label>
+                <div id="qualityEntry">
+                    <textarea rows="10" cols="100" required></textarea>
                 </div>
             </div>
             

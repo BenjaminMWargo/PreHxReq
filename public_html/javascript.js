@@ -93,8 +93,3 @@ function toggle(divID)
         div.hidden = !div.hidden;
     }
 }
-
-function toggleRequired(elementId)
-{
-    document.getElementById(elementId).required = !document.getElementById(elementId).required;
-}
