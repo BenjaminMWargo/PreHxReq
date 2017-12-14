@@ -10,6 +10,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="mastercss.css">
+        <script type="text/javascript" src="javascript.js"></script>
     </head>
     <body>
         <!-- Header text of the form -->
@@ -72,8 +73,17 @@ and open the template in the editor.
 
             <div>
                 <b>Location: </b><i>(Where on your body is the problem?)</i>
-                <input type="checkbox" onchange="javascript:toggleRequird(chiefComplaintEntry);"/>
-                <textarea id="chiefComplaintEntry" rows="10" cols="100" required></textarea>
+                <div id="locationAddAndRemove" style="display:inline;">
+                    <a href="javascript:addTextInput('locationInputs', 3);" onclick="">Add</a>
+                    <label>|</label>
+                    <a href="javascript:removeTextInput('locationInputs');" onclick="">Remove</a>
+                </div>
+                <br/><input type="checkbox" onchange="javascript:toggle('locationAddAndRemove');
+                                                      javascript:toggle('locationInputs');"/>
+                <label>N/A</label>
+                <div id="locationInputs">
+                    <input required/>
+                </div>
             </div>
             
             <div>
