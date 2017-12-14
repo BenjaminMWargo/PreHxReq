@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Patient Pre-History Form (Past Family Social History)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="mastercss.css">
+        <script type="text/javascript" src="javascript.js"></script>
+    </head>
+    <body>
+        <!-- Header text of the form -->
+        <div>
+            <label style="float: left">Patient Advocacy Initiative - Patient Experience Survey</label>
+            <label style="float: right;">Packet #1: PRE - Send to patient prior to office visit</label>
+        </div>
+        
+        <br/><br/>
+        
+        <!-- Past Family Social History header -->
+        <div>
+            <h3>
+                <b>Past Family Social History</b>
+            </h3>
+        </div>
+        
+        <!-- Medications list section -->
+        <form action="usersurvey.html">
+            <div>
+                <b>Medications List: </b>
+                <br/>
+                <i>(If you are a <b>new patient</b> to our practice, please <b>list all of your
+                    medications</b> and include dose, number of times a day, etc. If you are
+                    an <b><u>existing patient, only list new medications or changes</u></b> to
+                    your existing medications; please include dose, number of times a day, etc.)
+                </i>
+
+                <div id="medicationAddAndRemove" style="display:inline;">
+                    <a href="javascript:addMedInput('MedicationInputs');" onclick="">Add New Medication Field</a>
+                </div>
+                
+                <input type="checkbox" onchange="toggle('MedicationInputs');
+                                                 toggle('medicationAddAndRemove');"/>
+                            No current medications<br/>
+
+                <div id="MedicationInputs">
+                    <div id="hardcodeMed1" class="solid_border">
+                        <label >Medication</label>
+                        <a href="javascript:removeMedInput('hardcodeMed1');" 
+                           style="float: right;">Remove</a><br/>
+                        Name: <input type="text" value="HCTZ"/>
+                        Dose: <input type="text" value="25mg"/><br/>
+                        Directions:<br/> <textarea rows="10" cols="100">One tablet by mouth twice daily</textarea>
+                    </div>
+
+                    <div id="hardcodeMed2" class="solid_border">
+                        <label >Medication</label>
+                        <a href="javascript:removeMedInput('hardcodeMed2');" 
+                           style="float: right;">Remove</a><br/>
+                        Name: <input type="text" value="Furosemide"/>
+                        Dose: <input type="text" value="20mg"/><br/>
+                        Directions:<br/> <textarea rows="10" cols="100">One tablet by mouth every 6 to 8 hours</textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <br/><br/>
+
+            <!-- Allergies section -->
+            <div>
+                <b>Allergies to medications: </b>
+                <i>(List any allergies to medications)</i>
+
+                <div id="allergiesAddAndRemove" style="display:inline;">
+                    <a href="javascript:addTextInput('allergiesInputs', 4);">Add</a>
+                    <label>|</label>
+                    <a href="javascript:removeTextInput('allergiesInputs');">Remove</a>
+                </div>
+                
+                <input type="checkbox" onchange="toggle('allergiesInputs');
+                                                 toggle('allergiesAddAndRemove');"/>
+                            No current medications<br/>
+
+                <div id="allergiesInputs">
+                    <input value="Acetaminophen"/>
+                    <input value="Percocet"/>
+                    <input value="Synthroid"/>
+                </div>
+            </div>
+            
+            <br/><br/>
+
+            <!-- Past surgeries section -->
+            <div>
+                <b>Prior Surgeries: </b><i>(List any surgeries (with date) you have had that
+                    are not already included in your health record)</i>
+                <div id="surgeriesAddAndRemove" style="display:inline;">
+                    <a href="javascript:addSurgeryInputs('surgeriesEntry');">Add</a>
+                    <label>|</label>
+                    <a href="javascript:removeSurgeryInputs('surgeriesEntry');">Remove</a>
+                </div>
+                
+                <input type="checkbox" onchange="toggle('surgeriesAddAndRemove');
+                                                 toggle('surgeriesEntry');"/>
+                            No prior surgeries<br/>
+                <div id="surgeriesEntry">
+                    Surgery: <input value='Open Heart Surgery'/>
+                    Date:
+                    <!-- Month dropdown selection -->
+                    <select>
+                        <option value="">--Month--</option>
+                    </select>
+                    <!-- Day dropdown selection -->
+                    <select>
+                        <option value="">--Day--</option>
+                    </select>
+                    <!-- Year dropdown selection -->
+                    <select>
+                        <option value="">--Year--</option>
+                    </select>
+                </div>
+            </div>
+            
+            <br/><br/>
+        
+            <!-- Prior illnesses -->
+            <div>
+                <b>Prior illnesses</b>
+                <i>(List any illnesses that may be related to your current problem)</i>
+                <div id="illnessesAddAndRemove" style="display:inline;">
+                    <a href="javascript:addTextInput('illnessesEntry', 4);">Add</a>
+                    <label>|</label>
+                    <a href="javascript:removeTextInput('illnessesEntry');">Remove</a>
+                </div>
+                
+                <input type="checkbox" onchange="toggle('illnessesEntry');
+                                                 toggle('illnessesAddAndRemove');"/>
+                            No prior illnesses<br/>
+                <br/>
+                <div id="illnessesEntry">
+                    <input/>
+                </div>
+            </div>
+            
+            <br/><br/>
+
+            <!-- Change in lifestyle -->
+            <div>
+                <b>Change in lifestyle: </b>
+                <i>(Have there been any changes in your lifestyle? Marital Status, occupation, 
+                smoking, alcohol use, recreational drug use, etc.)</i>
+                <select onchange="javascript:toggle('lifestyleEntry');">
+                    <option>No</option>
+                    <option>Yes</option>
+                </select>
+                <div id="lifestyleEntry" hidden>
+                    <textarea placeholder="Ellaborate here" rows="10" cols="100"></textarea>
+                </div>
+            </div>
+            
+            <br/><br/>
+
+            <!-- Change in family health history -->
+            <div>
+                <b>Change in family health history: </b>
+                <i>(Any change in family health history?)</i>
+                <select onchange="javascript:toggle('familyHistoryEntry');">
+                    <option>No</option>
+                    <option>Yes</option>
+                </select>
+                <div id="familyHistoryEntry" hidden>
+                    <textarea placeholder="Ellaborate here" rows="10" cols="100"></textarea>
+                </div>
+            </div>
+            
+            <br/><br/>
+        
+            <div>
+                <button type="button" onclick="window.location = 'patienthub.html'">
+                    Save and Return Later</button>
+                <input type="submit" value="Submit Pre-History"/>
+            </div>
+        </form>
+        <br/><br/>
+    </body>
+</html>

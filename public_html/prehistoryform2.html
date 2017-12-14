@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Patient Pre-History Form (Status of Chronic Disease(s) and Review of Systems)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="mastercss.css">
+        <script type="text/javascript" src="javascript.js"></script>
+    </head>
+    <body>
+        <!-- Header text of the form -->
+        <div>
+            <label style="float: left">Patient Advocacy Initiative - Patient Experience Survey</label>
+            <label style="float: right;">Packet #1: PRE - Send to patient prior to office visit</label>
+        </div>
+        
+        <br/><br/>
+        
+        <!-- Status of chronic disease(s) header -->
+        <div>
+            <h3>
+                <b>STATUS of Chronic Disease(s)</b>
+            </h3>
+            
+            <b>
+                Name each condition/disease and comment on how you are doing.
+                <br/>
+                If you are being seen today because of an issue with your chronic disease(s),
+                please discuss that issue first and give an update on each condition
+            </b>
+            <br/><br/>
+            <div id="diseaseAddAndRemove">
+                <a href="javascript:addDiseaseInput('diseaseEntry');">Add</a>
+                <label>|</label>
+                <a href="javascript:removeDiseaseInput('diseaseEntry');">Remove</a>
+            </div>
+        </div>
+        
+        <br/><br/>
+        
+        <!-- Chronic disease(s) entry section -->
+        <form action="prehistoryform3.html">
+            <div id="diseaseEntry" class="solid_border">
+                <div>
+                    Name of Disease: <input/><br/>
+                    <textarea placeholder="Description of your current status" 
+                          rows="10" cols="100"></textarea>
+                </div>
+            </div>
+
+            <!-- Review of Systems header -->
+            <div>
+                <h3><b>Review of Systems</b></h3>
+            </div>
+        
+            <!-- Constitutional section -->
+            <div>
+                <b>Constitutional: </b><i>(How are you feeling overall? Energy level? Weight loss?)</i>
+            </div>
+
+            <!-- Vision section -->
+            <div style="margin:5px;margin-left:0px;">
+                <b>Eyes: </b>
+                <select>
+                    <option>--Vision is fine--</option>
+                    <option>Blurred Vision</option>
+                    <option>Loss of Vision</option>
+                </select>
+            </div>
+        
+            <!-- Ears, nose, mouth, and throat section -->
+            <div>
+                <b>Ears, nose, mouth, throat: </b><i>(Earache? Mouth pain? Sore throat?)</i>
+                <br/><input type="checkbox" onchange="javascript:toggle('earsNoseMouthThroatEntry');"/>
+                <label>N/A</label>
+                <div id="earsNoseMouthThroatEntry">
+                    <textarea rows="10" cols="100"></textarea>
+                </div>
+            </div>
+            
+            <!-- Cardiovascular section -->
+            <div>
+                <b>Cardiovascular: </b><i>(Chest pain?)</i>
+                <input id="cardiovascularCheckBox1" type="checkbox"
+                               onclick="unCheckBox('cardiovascularCheckBox2');" required/>Yes
+                <input id="cardiovascularCheckBox2" type="checkbox"
+                               onclick="unCheckBox('cardiovascularCheckBox1');" required/>No<br/>
+            </div>
+            
+            <!-- Respiratory section -->
+            <div>
+                <b>Respiratory:</b>
+                <select>
+                    <option>Breathing is fine</option>
+                    <option>Difficulty breathing</option>
+                    <option>Shortness of breath</option>
+                    <option>Both</option>
+                </select>
+            </div>
+            
+            <!-- Gastrointestinal section -->
+            <div style="margin:5px;margin-left:0px;">
+                <b>Gastrointestinal: </b>
+                <select onchange="javascript:toggle('gastroEntry');">
+                    <option value="">No eating/bowel problems</option>
+                    <option>Trouble eating</option>
+                    <option>Bowel movement troubles</option>
+                    <option>Both</option>
+                </select>
+                
+                <div id="gastroEntry" hidden>
+                    <textarea placeholder="Please Ellaborate" rows="10" cols="100"></textarea>
+                </div>
+            </div>
+            
+            <!-- Genitourinary section -->
+            <div>
+                <b>Genitourinary: </b><i>(Trouble urinating? Genital issues?</i>
+                <br/><input type="checkbox" onchange="javascript:toggle('genitalEntry');"/>
+                <label>N/A</label><br/>
+                <div id="genitalEntry">
+                    <textarea rows="10" cols="100"></textarea>
+                </div>
+            </div>
+            
+            <!-- Joint or muscle pain section -->
+            <div>
+                <b>Musculoskeletal: </b><i>Joint or muscle pains or stiffness?</i>
+                <br/><input type="checkbox" onchange="javascript:toggle('muscleEntry');"/>
+                <label>N/A</label><br/>
+                <div id="muscleEntry">
+                    <textarea rows="10" cols="100"></textarea>
+                </div>
+            </div>
+            
+            <!-- Skin changes section -->
+            <div>
+                <b>Integumentary:</b><i>(Skin color changes, moles, or rashes?)</i>
+                <br/><input type="checkbox" onchange="javascript:toggle('skinEntry');"/>
+                <label>N/A</label><br/>
+                <div id="skinEntry">
+                    <textarea rows="10" cols="100"></textarea>
+                </div>
+            </div>
+            
+            <!-- Neurological section -->
+            <div>
+                <b>Neurologic: </b><i>(Numbness, pain, or trouble moving?)</i>
+                <br/><input type="checkbox" onchange="javascript:toggle('neurologicEntry');"/>
+                <label>N/A</label><br/>
+                <div id="neurologicEntry">
+                    <textarea rows="10" cols="100"></textarea>
+                </div>
+            </div>
+            
+            <!-- Endocrine section -->
+            <div style="margin:5px;margin-left:0px;">
+                <b>Endocrine: </b>
+                <select onchange="javascript:toggle('endocrineEntry');">
+                    <option>No problems</option>
+                    <option>Feeling fatigued</option>
+                    <option>Increased thirst</option>
+                    <option>Both</option>
+                </select>
+                
+                <div id="endocrineEntry" hidden>
+                    <textarea rows="10" cols="100"></textarea>
+                </div>
+            </div>
+            
+            <!-- Psychiatric section -->
+            <div>
+                <b>Psychiatric:</b><i>(Mood changes, feelings of depression or anxiety?)</i>
+                <br/><input type="checkbox" onchange="javascript:toggle('psychiatricEntry');"/>
+                <label>N/A</label><br/>
+                
+                <div id="psychiatricEntry">
+                    <textarea rows="10" cols="100"></textarea>
+                </div>
+            </div>
+            
+            <!-- Hematologic/lymphatic section -->
+            <div>
+                <b>Hematologic/lymphatic:</b>
+                <select onchange="javascript:toggle('brusingSwellingEntry');">
+                    <option>No bruising or swelling</option>
+                    <option>I have bruising</option>
+                    <option>I have swelling</option>
+                    <option>I have both</option>
+                </select>
+                
+                <div id="brusingSwellingEntry" hidden>
+                    <textarea rows="10" cols="100"></textarea>
+                </div>
+            </div>
+            
+            <!-- Seasonal allergies section -->
+            <div style="margin:5px;margin-left:0px;">
+                <b>Allergy/Immunologic:</b><i>(Seasonal Allergies?)</i>
+                <div id="allergiesAddAndRemove" style="display:inline">
+                    <a href="javascript:addTextInput('allergiesInputs', 3);">Add</a>
+                    <label>|</label>
+                    <a href="javascript:removeTextInput('allergiesInputs');">Remove</a>
+                </div>
+                
+                <br/>
+                <input type="checkbox" onchange="toggle('allergiesInputs');
+                                                 toggle('allergiesAddAndRemove');"/>
+                    No allergies<br/>
+                <div id="allergiesInputs">
+                    <input/>
+                </div>
+            </div>
+            
+            <br/><br/>
+            <!-- Form buttons -->
+            <div>
+                <button type="button" onclick="window.location = 'patienthub.html'">
+                    Save and Return Later</button>
+                <input type="submit" value="Continue to Page 3"/>
+            </div>
+            
+        </form>
+    </body>
+</html>

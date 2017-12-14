@@ -94,6 +94,124 @@ function toggle(divID)
     }
 }
 
+function checkIfOther(selectID, divID)
+{
+    var select = document.getElementById(selectID);
+    var div = document.getElementById(divID);
+    
+    if(select.options[select.selectedIndex].value === "Other")
+    {
+        div.hidden = false;
+    }
+    else
+    {
+        div.hidden = true;
+    }
+}
+
+function addDiseaseInput(divID)
+{
+    var div = document.getElementById(divID);
+    var newDiseaseDiv = document.createElement("DIV");
+    var newTextArea = document.createElement("TEXTAREA");
+    
+    newTextArea.rows = "10";
+    newTextArea.cols = "100";
+    newTextArea.placeholder = "Description of your current status"
+    
+    newDiseaseDiv.innerHTML = "Name of Disease: ";
+    newDiseaseDiv.appendChild(document.createElement("INPUT"));
+    newDiseaseDiv.innerHTML += "<br/>";
+    newDiseaseDiv.appendChild(newTextArea);
+    
+    div.appendChild(newDiseaseDiv);
+}
+
+function removeDiseaseInput(divID)
+{
+    var div = document.getElementById(divID);
+    
+    if(div.children.length > 1)
+    {
+        div.removeChild(div.lastChild);
+    }
+}
+
+function addMedInput(divID)
+{
+    var div = document.getElementById(divID);
+    var newMedInput = document.createElement("DIV");
+    var a = document.createElement("A");
+    var directionsEntry = document.createElement("TEXTAREA");
+    var randomID = Math.random();
+    
+    a.href = "javascript:removeMedInput('" + randomID + "');";
+    a.style = "float:right;";
+    a.innerHTML = "Remove";
+    
+    directionsEntry.placeholder = "Please enter directions as clearly as possible";
+    directionsEntry.rows = "10";
+    directionsEntry.cols = "100";
+    
+    newMedInput.id = randomID;
+    newMedInput.className = "solid_border";
+    newMedInput.innerHTML += "Medication";
+    newMedInput.appendChild(a)
+    newMedInput.innerHTML += "Name: ";
+    newMedInput.appendChild(document.createElement("INPUT"));
+    newMedInput.innerHTML += " Dose: ";
+    newMedInput.appendChild(document.createElement("INPUT"));
+    newMedInput.innerHTML += "<br/>Directions:<br/>";
+    newMedInput.appendChild(directionsEntry);
+    
+    div.appendChild(newMedInput);
+}
+
+function removeMedInput(divIDToBeDeleted)
+{
+    var element = document.getElementById(divIDToBeDeleted);
+    element.parentNode.removeChild(element);
+}
+
+function addSurgeryInputs(divID)
+{
+    var div = document.getElementById(divID);
+    var newSurgeryInput = document.createElement("INPUT");
+    var newMonthInput = document.createElement("SELECT");
+    var newDayInput = document.createElement("SELECT");
+    var newYearInput = document.createElement("SELECT");
+    
+    var monthOption = document.createElement("OPTION");
+    monthOption.innerHTML = "--Month--";
+    newMonthInput.appendChild(monthOption);
+    
+    var dayOption = document.createElement("OPTION");
+    dayOption.innerHTML = "--Day--";
+    newDayInput.appendChild(dayOption);
+    
+    var yearOption = document.createElement("OPTION");
+    yearOption.innerHTML = "--Year--"
+    newYearInput.appendChild(yearOption);
+   
+    div.innerHTML += "<br/>Surgery: ";
+    div.appendChild(newSurgeryInput);
+    div.innerHTML += "Date: ";
+    div.appendChild(newMonthInput);
+    div.appendChild(newDayInput);
+    div.appendChild(newYearInput);
+}
+
+function removeSurgeryInputs(divID)
+{
+    var div = document.getElementById(divID);
+    
+    // Remove the last 7 elements corresponding with the last surgery entry fields
+    for(var i = 0; i < 7; i++)
+    {
+        div.removeChild(div.lastChild);
+    }
+}
+
 function UserOrAdmin()
 {
     console.log(document.getElementById('username').value);
