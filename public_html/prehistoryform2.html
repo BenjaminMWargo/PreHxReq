@@ -95,9 +95,40 @@ and open the template in the editor.
             </div>
             
             <!-- Gastrointestinal section -->
-            <div>
+            <div style="margin:5px;margin-left:0px;">
+                <b>Gastrointestinal: </b>
+                <select onchange="javascript:toggle('gastroEntry');">
+                    <option value="">No eating/bowel problems</option>
+                    <option>Trouble eating</option>
+                    <option>Bowel movement troubles</option>
+                </select>
                 
+                <div id="gastroEntry" hidden>
+                    <textarea placeholder="Please Ellaborate" rows="10" cols="100"></textarea>
+                </div>
             </div>
+            
+            <!-- Genitourinary section -->
+            <div>
+                <b>Genitourinary: </b><i>(Trouble urinating? Genital issues?</i>
+                <br/><input type="checkbox" onchange="javascript:toggle('genitalEntry');"/>
+                <label>N/A</label><br/>
+                <div id="genitalEntry">
+                    <textarea rows="10" cols="100"></textarea>
+                </div>
+            </div>
+            
+            <!-- Joint or muscle pain section -->
+            <div>
+                <b>Musculoskeletal: </b><i>Joint or muscle pains or stiffness?</i>
+                <br/><input type="checkbox" onchange="javascript:toggle('muscleEntry');"/>
+                <label>N/A</label><br/>
+                <div id="muscleEntry">
+                    <textarea rows="10" cols="100"></textarea>
+                </div>
+            </div>
+            
+            
             
             <br/><br/>
             <!-- Form buttons -->
