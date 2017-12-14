@@ -118,7 +118,7 @@ and open the template in the editor.
             </div>
             
             <!-- Timing of the problem -->
-            <div>
+            <div style="margin:5px;margin-left:0px;">
                 <b>Timing: </b><i>(When does the problem occur?)</i>
                 <select id="timingSelectId" 
                         onchange="javascript:checkIfOther('timingSelectId', 
@@ -132,6 +132,35 @@ and open the template in the editor.
                 <div id="timingOtherTextEntry" hidden>
                     <textarea placeholder="Describe the timing here" rows="10" 
                               cols="100" required></textarea>
+                </div>
+            </div>
+            
+            <!-- Context of the problem -->
+            <div>
+                <b>Context: </b><i>(Are there any circumstances when this happens? (After eating, 
+                    when sitting, when standing, etc.)</i>
+                <br/><input type="checkbox" onchange="javascript:toggle('contextEntry');"/>
+                <label>N/A</label><br/>
+                <div id="contextEntry">
+                    <textarea rows="10" cols="100" required></textarea>
+                </div>
+            </div>
+            
+            <!-- Modifying factors section -->
+            <div>
+                <b>Modifying Factors: </b><i>(What makes it feel better or worse?)</i>
+                <br/><input type="checkbox" onchange="javascript:toggle('modifyingFactorsEntry');"/>
+                <label>N/A</label><br/>
+                <div id="modifyingFactorsEntry">
+                    <textarea rows="10" cols="100" required></textarea>
+                </div>
+            </div>
+            
+            <!-- Additional comments -->
+            <div>
+                <b>Associated Signs or Symptoms: </b><i>(Do you have any additional comments?)</i>
+                <div>
+                    <textarea placeholder="Optional" rows="10" cols="100"></textarea>
                 </div>
             </div>
             
