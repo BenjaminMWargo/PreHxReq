@@ -60,7 +60,7 @@
 		</div>
 	</div>
 	<h1>User Admin</h1>
-	<div id="userAdmin">
+	<div id="userAdmin" class="solid_border">
 		<div id="userSearchBox" class="solid_border" style="width: 100%">
 			<form>
 				<span>Search Terms: </span>
@@ -81,6 +81,23 @@
 				<input type="submit">
 			</form>
 		</div>
+		<h3>Admins<h3>
+			<table id="userTable" class="solid_border" style="width: 100%">
+				<tr>
+					<th>User ID</th>
+					<th>Username</th>
+					<th>Company</th>
+				</tr>
+				<tr>
+					<td align="center"><a href="superadminuseredit.html">#1E2F4BBCAA2</a></td>
+					<td align="center">extreme_admin_guy</td>
+					<td align="center">MEDCO</td>
+				</tr>
+			</table>
+			<form action="superadminuseradd.html">
+				<input type="submit" value="Add User">
+			</form>
+		<h3>Users<h3>
 		<table id="userTable" class="solid_border" style="width: 100%">
 			<tr>
 				<th>User ID</th>
@@ -89,7 +106,7 @@
 				<th>Sex</th>
 			</tr>
 			<tr>
-				<td align="center"><a href="adminviewuser.html">#1E2F4B0CAA2</a></td>
+				<td align="center"><a href="superadminuseredit.html">#1E2F4B0CAA2</a></td>
 				<td align="center">Pennsylvania, USA</td>
 				<td align="center">37</td>
 				<td align="center">M</td>
@@ -113,48 +130,17 @@
 				<td align="center">M</td>
 			</tr>
 		</table>
+		<form action="superadminuseradd.html">
+			<input type="submit" value="Add User">
+		</form>
 	</div>
-	<h1>PreHx Admin</h1>
-	<div id="preHx">
-		<div id="preHxSearchBox" class="solid_border" style="width: 100%">
-			<form>
-				<span>Search Terms: </span>
-				<input type="text" name="searchTerm">
-				<span>
-				    <input type="radio" id="timeOption"
-					 name="contact" value="time">
-					<label for="contactChoice1">Submission Time</label>
-
-					<input type="radio" id="userOption"
-					 name="contact" value="user">
-					<label for="contactChoice2">User Key</label>
-				</span>
+			
+		<h1>Site Admin</h1>
+		<div id="siteAdmin" class="solid_border">
+			<form style="width: 100%">
+				<input type="text" value="Set Homepage Ticker Message">
 				<input type="submit">
 			</form>
 		</div>
-		<table id="prehxTable" class="solid_border" style="width: 100%">
-			<tr>
-				<th>PreHX ID</th>
-				<th>User ID</th>
-				<th>Time Submitted</th>
-			</tr>
-			<tr>
-				<td align="center">#333ADF208EF</td>
-				<td align="center">#1E2F4B0CAA2</td>
-				<td align="center">11s ago</td>
-			</tr>
-			<tr>
-				<td align="center">#40102ABEE8F</td>
-				<td align="center">#142F440CBAD</td>
-				<td align="center">1m ago</td>
-			</tr>
-			<tr>
-				<td align="center">#5D2180AAA2F</td>
-				<td align="center">#1E409EE21A2</td>
-				<td align="center">35m ago</td>
-			</tr>
-
-		</table>
-	</div>
   </body>
 </html>
