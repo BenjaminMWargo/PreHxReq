@@ -144,3 +144,26 @@ function removeMedInput(divIDToBeDeleted)
     var element = document.getElementById(divIDToBeDeleted);
     element.parentNode.removeChild(element);
 }
+
+function addSurgeryInputs(divID)
+{
+    var div = document.getElementById(divID);
+    var newSurgeryInput = document.createElement("INPUT");
+    var newDateInput = document.createElement("INPUT");
+    
+    div.innerHTML += "<br/>Surgery: ";
+    div.appendChild(newSurgeryInput);
+    div.innerHTML += "Date: ";
+    div.appendChild(newDateInput);
+}
+
+function removeSurgeryInputs(divID)
+{
+    var div = document.getElementById(divID);
+    
+    // Remove the last 5 elements corresponding with the last surgery entry fields
+    for(var i = 0; i < 5; i++)
+    {
+        div.removeChild(div.lastChild);
+    }
+}

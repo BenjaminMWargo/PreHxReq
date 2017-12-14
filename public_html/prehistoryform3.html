@@ -62,5 +62,40 @@ and open the template in the editor.
                 </div>
             </div>
         </div>
+        
+        <!-- Allergies section -->
+        <div>
+            <b>Allergies to medications: </b>
+            <i>List any allergies to medications</i>
+            
+            <div id="medicationsAddAndRemove" style="display:inline;">
+                <a href="javascript:addTextInput('allergiesInputs', 4);">Add</a>
+                <label>|</label>
+                <a href="javascript:removeTextInput('allergiesInputs');">Remove</a>
+            </div>
+            
+            <div id="allergiesInputs">
+                <input value="Acetaminophen"/>
+                <input value="Percocet"/>
+                <input value="Synthroid"/>
+            </div>
+        </div>
+        
+        <!-- Past surgeries section -->
+        <div>
+            <b>Prior Surgeries: </b><i>(List any surgeries (with date) you have had that
+                are not already included in your health record)</i>
+            <div id="surgeriesAddAndRemove" style="display:inline;">
+                <a href="javascript:addSurgeryInputs('surgeriesEntry');">Add</a>
+                <label>|</label>
+                <a href="javascript:removeSurgeryInputs('surgeriesEntry');">Remove</a>
+            </div>
+            <div id="surgeriesEntry">
+                Surgery: <input/>
+                Date: <input/>
+            </div>
+        </div>
+        
+        <br/><br/>
     </body>
 </html>
