@@ -220,6 +220,10 @@ function UserOrAdmin()
     {
         document.getElementById("loginForm").action = "admindash.html";
     }
+    else if(document.getElementById('username').value === "superadmin")
+    {
+        document.getElementById("loginForm").action = "superadmindash.html";
+    }
     else
     {
         document.getElementById("loginForm").action = "patienthub.html";
