@@ -20,7 +20,7 @@ and open the template in the editor.
         </div>
         
         <!-- Disclosure information -->
-        <br/><br/>
+        <br/><br/><br/>
         <div>
             <b>Disclosure:</b> This form and the survey have been approved by the Conemaugh Memorial
             Medical Center Institutional Review Board and Conemaugh Health System. Your participation
@@ -37,7 +37,7 @@ and open the template in the editor.
             DATE: 12/27/2036<br/>
         </div>
         
-        <form action="">
+        <form action="prehistoryform2.html">
             <!-- Chief complaint section -->
             <div>
                 <b>Chief Complaint:</b> <i>(Why did you make this appointment?)</i>
@@ -56,7 +56,7 @@ and open the template in the editor.
                 <h4>
                     <i>
                         Please go to 
-                        <a href="">Section: Status of Chronic Disease(s)</a>
+                        <a href="prehistoryform2.html">Section: Status of Chronic Disease(s)</a>
                         on page 2 if your appointment is for an existing, chronic condition(s).
                     </i>
                 </h4>
@@ -83,7 +83,7 @@ and open the template in the editor.
                                                       javascript:toggle('locationInputs');"/>
                 <label>N/A</label>
                 <div id="locationInputs">
-                    <input required/>
+                    <input/>
                 </div>
             </div>
             
@@ -93,7 +93,7 @@ and open the template in the editor.
                 <br/><input type="checkbox" onchange="javascript:toggle('qualityEntry');"/>
                 <label>N/A</label>
                 <div id="qualityEntry">
-                    <textarea rows="10" cols="100" required></textarea>
+                    <textarea rows="10" cols="100"></textarea>
                 </div>
             </div>
             
@@ -131,7 +131,7 @@ and open the template in the editor.
                 </select>
                 <div id="timingOtherTextEntry" hidden>
                     <textarea placeholder="Describe the timing here" rows="10" 
-                              cols="100" required></textarea>
+                              cols="100"></textarea>
                 </div>
             </div>
             
@@ -142,7 +142,7 @@ and open the template in the editor.
                 <br/><input type="checkbox" onchange="javascript:toggle('contextEntry');"/>
                 <label>N/A</label><br/>
                 <div id="contextEntry">
-                    <textarea rows="10" cols="100" required></textarea>
+                    <textarea rows="10" cols="100"></textarea>
                 </div>
             </div>
             
@@ -152,7 +152,7 @@ and open the template in the editor.
                 <br/><input type="checkbox" onchange="javascript:toggle('modifyingFactorsEntry');"/>
                 <label>N/A</label><br/>
                 <div id="modifyingFactorsEntry">
-                    <textarea rows="10" cols="100" required></textarea>
+                    <textarea rows="10" cols="100"></textarea>
                 </div>
             </div>
             
@@ -164,6 +164,8 @@ and open the template in the editor.
                 </div>
             </div>
             
+            <br/><br/>
+            
             <!-- Form buttons -->
             <div>
                 <button type="button" onclick="window.location = 'patienthub.html';">
@@ -171,6 +173,7 @@ and open the template in the editor.
                 </button>
                 <input type="submit" value="Continue to Page 2"/>
             </div>
+            
         </form>
     </body>
 </html>
