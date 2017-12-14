@@ -108,3 +108,39 @@ function checkIfOther(selectID, divID)
         div.hidden = true;
     }
 }
+
+function addMedInput(divID)
+{
+    var div = document.getElementById(divID);
+    var newMedInput = document.createElement("DIV");
+    var a = document.createElement("A");
+    var directionsEntry = document.createElement("TEXTAREA");
+    var randomID = Math.random();
+    
+    a.href = "javascript:removeMedInput('" + randomID + "');";
+    a.style = "float:right;";
+    a.innerHTML = "Remove";
+    
+    directionsEntry.placeholder = "Please enter directions as clearly as possible";
+    directionsEntry.rows = "10";
+    directionsEntry.cols = "100";
+    
+    newMedInput.id = randomID;
+    newMedInput.className = "solid_border";
+    newMedInput.innerHTML += "Medication";
+    newMedInput.appendChild(a)
+    newMedInput.innerHTML += "Name: ";
+    newMedInput.appendChild(document.createElement("INPUT"));
+    newMedInput.innerHTML += " Dose: ";
+    newMedInput.appendChild(document.createElement("INPUT"));
+    newMedInput.innerHTML += "<br/>Directions:<br/>";
+    newMedInput.appendChild(directionsEntry);
+    
+    div.appendChild(newMedInput);
+}
+
+function removeMedInput(divIDToBeDeleted)
+{
+    var element = document.getElementById(divIDToBeDeleted);
+    element.parentNode.removeChild(element);
+}
