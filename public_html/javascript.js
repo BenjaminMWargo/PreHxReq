@@ -149,20 +149,36 @@ function addSurgeryInputs(divID)
 {
     var div = document.getElementById(divID);
     var newSurgeryInput = document.createElement("INPUT");
-    var newDateInput = document.createElement("INPUT");
+    var newMonthInput = document.createElement("SELECT");
+    var newDayInput = document.createElement("SELECT");
+    var newYearInput = document.createElement("SELECT");
     
+    var monthOption = document.createElement("OPTION");
+    monthOption.innerHTML = "--Month--";
+    newMonthInput.appendChild(monthOption);
+    
+    var dayOption = document.createElement("OPTION");
+    dayOption.innerHTML = "--Day--";
+    newDayInput.appendChild(dayOption);
+    
+    var yearOption = document.createElement("OPTION");
+    yearOption.innerHTML = "--Year--"
+    newYearInput.appendChild(yearOption);
+   
     div.innerHTML += "<br/>Surgery: ";
     div.appendChild(newSurgeryInput);
     div.innerHTML += "Date: ";
-    div.appendChild(newDateInput);
+    div.appendChild(newMonthInput);
+    div.appendChild(newDayInput);
+    div.appendChild(newYearInput);
 }
 
 function removeSurgeryInputs(divID)
 {
     var div = document.getElementById(divID);
     
-    // Remove the last 5 elements corresponding with the last surgery entry fields
-    for(var i = 0; i < 5; i++)
+    // Remove the last 7 elements corresponding with the last surgery entry fields
+    for(var i = 0; i < 7; i++)
     {
         div.removeChild(div.lastChild);
     }

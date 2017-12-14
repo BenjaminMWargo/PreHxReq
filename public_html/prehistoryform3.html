@@ -39,9 +39,13 @@ and open the template in the editor.
                     your existing medications; please include dose, number of times a day, etc.)
                 </i>
 
-                <div id="medicationAddAndRemove">
+                <div id="medicationAddAndRemove" style="display:inline;">
                     <a href="javascript:addMedInput('MedicationInputs');" onclick="">Add New Medication Field</a>
                 </div>
+                
+                <input type="checkbox" onchange="toggle('MedicationInputs');
+                                                 toggle('medicationAddAndRemove');"/>
+                            No current medications<br/>
 
                 <div id="MedicationInputs">
                     <div id="hardcodeMed1" class="solid_border">
@@ -63,17 +67,23 @@ and open the template in the editor.
                     </div>
                 </div>
             </div>
+            
+            <br/><br/>
 
             <!-- Allergies section -->
             <div>
                 <b>Allergies to medications: </b>
-                <i>List any allergies to medications</i>
+                <i>(List any allergies to medications)</i>
 
-                <div id="medicationsAddAndRemove" style="display:inline;">
+                <div id="allergiesAddAndRemove" style="display:inline;">
                     <a href="javascript:addTextInput('allergiesInputs', 4);">Add</a>
                     <label>|</label>
                     <a href="javascript:removeTextInput('allergiesInputs');">Remove</a>
                 </div>
+                
+                <input type="checkbox" onchange="toggle('allergiesInputs');
+                                                 toggle('allergiesAddAndRemove');"/>
+                            No current medications<br/>
 
                 <div id="allergiesInputs">
                     <input value="Acetaminophen"/>
@@ -81,6 +91,8 @@ and open the template in the editor.
                     <input value="Synthroid"/>
                 </div>
             </div>
+            
+            <br/><br/>
 
             <!-- Past surgeries section -->
             <div>
@@ -91,11 +103,29 @@ and open the template in the editor.
                     <label>|</label>
                     <a href="javascript:removeSurgeryInputs('surgeriesEntry');">Remove</a>
                 </div>
+                
+                <input type="checkbox" onchange="toggle('surgeriesAddAndRemove');
+                                                 toggle('surgeriesEntry');"/>
+                            No prior surgeries<br/>
                 <div id="surgeriesEntry">
                     Surgery: <input value='Open Heart Surgery'/>
-                    Date: <input value='5/17/2028'/>
+                    Date:
+                    <!-- Month dropdown selection -->
+                    <select>
+                        <option value="">--Month--</option>
+                    </select>
+                    <!-- Day dropdown selection -->
+                    <select>
+                        <option value="">--Day--</option>
+                    </select>
+                    <!-- Year dropdown selection -->
+                    <select>
+                        <option value="">--Year--</option>
+                    </select>
                 </div>
             </div>
+            
+            <br/><br/>
         
             <!-- Prior illnesses -->
             <div>
@@ -106,11 +136,17 @@ and open the template in the editor.
                     <label>|</label>
                     <a href="javascript:removeTextInput('illnessesEntry');">Remove</a>
                 </div>
+                
+                <input type="checkbox" onchange="toggle('illnessesEntry');
+                                                 toggle('illnessesAddAndRemove');"/>
+                            No prior illnesses<br/>
                 <br/>
                 <div id="illnessesEntry">
                     <input/>
                 </div>
             </div>
+            
+            <br/><br/>
 
             <!-- Change in lifestyle -->
             <div>
@@ -125,6 +161,8 @@ and open the template in the editor.
                     <textarea placeholder="Ellaborate here" rows="10" cols="100"></textarea>
                 </div>
             </div>
+            
+            <br/><br/>
 
             <!-- Change in family health history -->
             <div>
