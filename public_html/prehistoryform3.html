@@ -91,8 +91,50 @@ and open the template in the editor.
                 <a href="javascript:removeSurgeryInputs('surgeriesEntry');">Remove</a>
             </div>
             <div id="surgeriesEntry">
-                Surgery: <input/>
-                Date: <input/>
+                Surgery: <input value='Open Heart Surgery'/>
+                Date: <input value='5/17/2028'/>
+            </div>
+        </div>
+        
+        <!-- Prior illnesses -->
+        <div>
+            <b>Prior illnesses</b>
+            <i>(List any illnesses that may be related to your current problem)</i>
+            <div id="illnessesAddAndRemove" style="display:inline;">
+                <a href="javascript:addTextInput('illnessesEntry', 4);">Add</a>
+                <label>|</label>
+                <a href="javascript:removeTextInput('illnessesEntry');">Remove</a>
+            </div>
+            <br/>
+            <div id="illnessesEntry">
+                <input/>
+            </div>
+        </div>
+        
+        <!-- Change in lifestyle -->
+        <div>
+            <b>Change in lifestyle: </b>
+            <i>(Have there been any changes in your lifestyle? Marital Status, occupation, 
+                smoking, alcohol use, recreational drug use, etc.)</i>
+            <select onchange="javascript:toggle('lifestyleEntry');">
+                <option>No</option>
+                <option>Yes</option>
+            </select>
+            <div id="lifestyleEntry" hidden>
+                <textarea placeholder="Ellaborate here" rows="10" cols="100"></textarea>
+            </div>
+        </div>
+        
+        <!-- Change in family health history -->
+        <div>
+            <b>Change in family health history: </b>
+            <i>(Any change in family health history?)</i>
+            <select onchange="javascript:toggle('familyHistoryEntry');">
+                <option>No</option>
+                <option>Yes</option>
+            </select>
+            <div id="familyHistoryEntry" hidden>
+                <textarea placeholder="Ellaborate here" rows="10" cols="100"></textarea>
             </div>
         </div>
         
