@@ -93,3 +93,19 @@ function toggle(divID)
         div.hidden = !div.hidden;
     }
 }
+
+function UserOrAdmin()
+{
+    console.log(document.getElementById('username').value);
+    
+    if(document.getElementById('username').value === "admin")
+    {
+        document.getElementById("loginForm").action = "admindash.html";
+    }
+    else
+    {
+        document.getElementById("loginForm").action = "patienthub.html";
+    }
+    
+    return true;
+}
