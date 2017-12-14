@@ -33,16 +33,24 @@ and open the template in the editor.
                 If you are being seen today because of an issue with your chronic disease(s),
                 please discuss that issue first and give an update on each condition
             </b>
+            <br/><br/>
+            <div id="diseaseAddAndRemove">
+                <a href="javascript:addDiseaseInput('diseaseEntry');">Add</a>
+                <label>|</label>
+                <a href="javascript:removeDiseaseInput('diseaseEntry');">Remove</a>
+            </div>
         </div>
         
         <br/><br/>
         
         <!-- Chronic disease(s) entry section -->
         <form action="prehistoryform3.html">
-            <div class="solid_border">
-                Name of Disease: <input/><br/>
-                <textarea placeholder="Description of your current status" 
+            <div id="diseaseEntry" class="solid_border">
+                <div>
+                    Name of Disease: <input/><br/>
+                    <textarea placeholder="Description of your current status" 
                           rows="10" cols="100"></textarea>
+                </div>
             </div>
 
             <!-- Review of Systems header -->

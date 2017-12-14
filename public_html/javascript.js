@@ -109,6 +109,34 @@ function checkIfOther(selectID, divID)
     }
 }
 
+function addDiseaseInput(divID)
+{
+    var div = document.getElementById(divID);
+    var newDiseaseDiv = document.createElement("DIV");
+    var newTextArea = document.createElement("TEXTAREA");
+    
+    newTextArea.rows = "10";
+    newTextArea.cols = "100";
+    newTextArea.placeholder = "Description of your current status"
+    
+    newDiseaseDiv.innerHTML = "Name of Disease: ";
+    newDiseaseDiv.appendChild(document.createElement("INPUT"));
+    newDiseaseDiv.innerHTML += "<br/>";
+    newDiseaseDiv.appendChild(newTextArea);
+    
+    div.appendChild(newDiseaseDiv);
+}
+
+function removeDiseaseInput(divID)
+{
+    var div = document.getElementById(divID);
+    
+    if(div.children.length > 1)
+    {
+        div.removeChild(div.lastChild);
+    }
+}
+
 function addMedInput(divID)
 {
     var div = document.getElementById(divID);
