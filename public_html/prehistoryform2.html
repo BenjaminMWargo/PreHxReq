@@ -38,30 +38,74 @@ and open the template in the editor.
         <br/><br/>
         
         <!-- Chronic disease(s) entry section -->
-        <div class="solid_border">
-            Name of Disease: <input/><br/>
-            <textarea placeholder="Description of your current status" 
-                      rows="10" cols="100"></textarea>
-        </div>
+        <form action="">
+            <div class="solid_border">
+                Name of Disease: <input/><br/>
+                <textarea placeholder="Description of your current status" 
+                          rows="10" cols="100"></textarea>
+            </div>
+
+            <!-- Review of Systems header -->
+            <div>
+                <h3><b>Review of Systems</b></h3>
+            </div>
         
-        <!-- Review of Systems header -->
-        <div>
-            <h3><b>Review of Systems</b></h3>
-        </div>
+            <!-- Constitutional section -->
+            <div>
+                <b>Constitutional: </b><i>(How are you feeling overall? Energy level? Weight loss?)</i>
+            </div>
+
+            <!-- Vision section -->
+            <div style="margin:5px;margin-left:0px;">
+                <b>Eyes: </b>
+                <select>
+                    <option>--Vision is fine--</option>
+                    <option>Blurred Vision</option>
+                    <option>Loss of Vision</option>
+                </select>
+            </div>
         
-        <!-- Constitutional section -->
-        <div>
-            <b>Constitutional: </b><i>(How are you feeling overall? Energy level? Weight loss?)</i>
-        </div>
-        
-        <!-- Vision section -->
-        <div>
-            <b>Eyes: </b>
-            <select>
-                <option>--Vision is fine--</option>
-                <option>Blurred Vision</option>
-                <option>Loss of Vision</option>
-            </select>
-        </div>
+            <!-- Ears, nose, mouth, and throat section -->
+            <div>
+                <b>Ears, nose, mouth, throat: </b><i>(Earache? Mouth pain? Sore throat?)</i>
+                <br/><input type="checkbox" onchange="javascript:toggle('earsNoseMouthThroatEntry');"/>
+                <label>N/A</label>
+                <div id="earsNoseMouthThroatEntry">
+                    <textarea rows="10" cols="100"></textarea>
+                </div>
+            </div>
+            
+            <!-- Cardiovascular section -->
+            <div>
+                <b>Cardiovascular: </b><i>(Chest pain?)</i>
+                <input id="cardiovascularCheckBox1" type="checkbox"
+                               onclick="unCheckBox('cardioVascularCheckBox2');" required/>Yes
+                <input id="cardiovascularCheckBox2" type="checkbox"
+                               onclick="unCheckBox('cardiovascularCheckBox1');" required/>No<br/>
+            </div>
+            
+            <!-- Respiratory section -->
+            <div>
+                <b>Respiratory:</b>
+                <select>
+                    <option>Breathing is fine</option>
+                    <option>Difficulty breathing</option>
+                    <option>Shortness of breath</option>
+                </select>
+            </div>
+            
+            <!-- Gastrointestinal section -->
+            <div>
+                
+            </div>
+            
+            <br/><br/>
+            <!-- Form buttons -->
+            <div>
+                <button type="button" onclick="window.location = 'patienthub.html'">
+                    Save and Return Later</button>
+            </div>
+            
+        </form>
     </body>
 </html>
